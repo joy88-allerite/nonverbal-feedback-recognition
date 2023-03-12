@@ -1,0 +1,239 @@
+body {
+	background-color: black;
+	overflow: hidden;
+}
+.video-cam{
+  margin-top: 70px;
+  margin-left: 385px;
+}
+
+.emotion-container {
+	margin-top: 85px;
+  margin-right: 2.5%;
+	display: flex;
+	justify-content: space-evenly;
+	width: 105vw;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.emotion {
+	box-shadow: 0.5px 0.1px 5px 10px rgba(255, 0, 0, 0.9);
+	border-radius: 50%;
+	height: 5%;
+	width: 5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.emotion img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+$side-menu-btn-color: #c0392b;
+
+*, *:before, *:after {
+  padding:0;
+  margin:0;
+}
+
+body {
+  overflow-x: hidden;
+  color: #fff;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
+body, html {
+  width:100%;
+  height:100%;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-weight:300;
+  font-size: 2.5em;
+}
+
+.sidebar-btn {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="sidebar-btn"] {
+  position: fixed;
+  right: 15px; 
+  top: 15px;
+  z-index: 2;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect style='fill:rgb(255,255,255)' width='15' height='3'/><rect style='fill:rgb(255,255,255)' y='8' width='20' height='3'/><rect style='fill:rgb(255,255,255)' y='16' width='25' height='3'/></svg>");
+  background-size: contain;
+}
+
+.sidebar-btn + label, .content {
+  transition: right 0.1s;
+}
+
+.sidebar-btn:checked + label {
+  right: 280px;
+}
+
+.sidebar-btn:checked ~ .content {
+  right: 290px;
+}
+
+.sidebar {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background-color: $side-menu-btn-color;
+}
+
+.sidebar li {
+  background-color: $side-menu-btn-color;
+  padding:1em;
+  color: #fff;
+  width:300px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight:400;  
+  float: right;
+  @include transition-property(all);
+  @include transition-duration(50ms);
+  @include transition-timing-function(ease-in);
+
+  &:hover {
+    background-color: darken($side-menu-btn-color, 10);
+  }
+}
+
+
+.content {
+  min-height: 100%;
+  min-width: 100%;
+  background-color:black;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  right: 0;
+  z-index: 1;  
+  padding: 4em;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: white;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: black;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.rank-line{
+	border: 3px solid white;
+  margin-left: -195%;
+  margin-top: 10%;
+  width: 240%
+}
+
+.ranked-output{
+  color: #fff;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  font-size: 12px;
+  margin-top: 12%;
+  margin-left: -115%;
+}
+
+.time-interval{
+	color: #fff;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	font-size: 12px;
+	margin-top: 2%;
+  margin-left: -195%;
+}
+
+.radio-cont{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+  font-weight:400; 
+  font-size: 12px;
+	margin-top: 1%;
+	margin-left: 2.5%;
+  float: right;
+}
+
+.picked-time{
+  margin-left: -160%;
+  margin-top: 10%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+  font-size: 12px;
+}
+
+.ranked-time{
+  margin-left: -195%;
+  margin-top: 10%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+  font-size: 12px;
+}

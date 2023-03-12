@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pulse Animation</title>
+  <!--Font Awesome Icon CDN-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!--Stylesheet-->
+	<link rel="stylesheet" href="style.css">
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    canvas {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+	<ul class="sidebar">
+		<form action="#" class="radio-cont">
+			<p class="time-interval">Time Interval:</p>
+			  	<p class="picked-time">
+			    	<input type="radio" id="test1" name="radio-group" checked>
+			    	<label for="test1">30 seconds</label>
+			  	</p>
+			  	<p class="picked-time">
+			    	<input type="radio" id="test2" name="radio-group">
+			    	<label for="test2">1 minute</label>
+			  	</p>
+			  	<p class="picked-time">
+			    	<input type="radio" id="test3" name="radio-group">
+			    	<label for="test3">3 minutes</label>
+			  	</p>
+				<p class="picked-time">
+			    	<input type="radio" id="test4" name="radio-group">
+			    	<label for="test4">5 minutes</label>
+			  	</p>
+		  	<hr class="rank-line"></hr> 
+		    <p class="ranked-output">Ranked Output:</p>
+			<p class="ranked-time">Ranked 1: Smile</p>  	
+		</form>
+
+	</ul>
+<input type="checkbox" id="sidebar-btn" class="sidebar-btn" checked/>
+<label for="sidebar-btn"></label>
+	<div class="content">
+    	<video class="video-cam" id="video" width="600" height="600" autoplay muted></video>
+	<div id="pulseSmile">
+		<div class="emotion-container">
+			<div id="pulseSmile" class="emotion">
+		        <img src="img/smile.png" alt="smile">
+			</div>
+
+			<div id="pulseFrown" class="emotion">
+		   		<img src="img/frown.png" alt="frown">
+			</div>
+		  
+			<div id="pulseBored" class="emotion">
+				<img src="img/bored.png" alt="bored">
+			</div>
+
+		  	<div id="pulseSaccades" class="emotion">
+		    	<img  src="img/saccades.png" alt="saccades">
+			</div>
+
+			<div id="pulseNod" class="emotion">
+				<img  src="img/nod.png" alt="head nod">
+			</div>
+
+			<div id="pulseShake" class="emotion">
+				<img src="img/shake.png" alt="head shake">
+			</div>
+
+		  	<div id="pulseThumbsUp" class="emotion">
+		 	    <img  src="img/thumbsUp.png" alt="thumbs up">
+			</div>
+
+			<div id="pulseThumbsDown" class="emotion">
+		    	<img  src="img/thumbsDown.png" alt="thumbs down">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+      
