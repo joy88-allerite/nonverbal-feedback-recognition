@@ -23,6 +23,8 @@ let joinAndDisplayLocalStream = async () => {
     document.getElementById('video-streams').insertAdjacentHTML('beforeend', player)
 
     localTracks[1].play(`user-${UID}`)
+    localTracks[0].setMuted(true)
+    localTracks[1].setMuted(true)
     
     await client.publish([localTracks[0], localTracks[1]])
 }
