@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pulse Animation</title>
+  <!--Font Awesome Icon CDN-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!--Stylesheet-->
+	<link rel="stylesheet" href="joy.css">
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    canvas {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <video id="video" width="600" height="600" autoplay muted></video>
+  
+  <div id="pulseSad" class="pulseSad">
+    <div class = "pulseSadBehind1" id = "pulseSadBehind1"></div>
+    <div class = "pulseSadBehind2" id = "pulseSadBehind2"></div>
+		<!---<i class="fas fa-frown"></i>--->
+    <i class="fas fa-tired"></i>
+	</div>
+	
+	<div id="pulseAngry" class="pulseAngry">
+    <div class = "pulseAngryBehind1" id = "pulseAngryBehind1"></div>
+    <div class = "pulseAngryBehind2" id = "pulseAngryBehind2"></div>
+		<i class="fas fa-angry"></i> 
+	</div>
+
+	<div id="pulseHappy" class="pulseHappy">
+    <div class = "pulseHappyBehind1" id = "pulseHappyBehind1"></div>
+    <div class = "pulseHappyBehind2" id = "pulseHappyBehind2"></div>
+    <i class="fas fa-grin"></i>
+		<!-----<i class="fas fa-grin-beam"></i>--->
+	</div>
+
+	<div id="pulseSurprise" class="pulseSurprise">
+    <div class = "pulseSurpriseBehind1" id = "pulseSurpriseBehind1"></div>
+    <div class = "pulseSurpriseBehind2" id = "pulseSurpriseBehind2"></div>
+		<i class="fas fa-surprise"></i>
+	</div>
+
+</body>
+</html>
+      

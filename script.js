@@ -71,12 +71,12 @@ video.addEventListener('play', () => {
     }
 
     if(detections[0].expressions.sad > calibrateSad || detections[0].expressions.fearful > calibrateFear){
-      console.log("Sad")
-      startAnimation('pulseSadBehind1')
-      startAnimation2('pulseSadBehind2')
+      console.log("Frown")
+      startAnimation('pulseFrown')
+      startAnimation2('pulseFrown')
     }else{
-      stopAnimation('pulseSadBehind1')
-      stopAnimation('pulseSadBehind2')
+      stopAnimation('pulseFrown')
+      stopAnimation('pulseFrown')
     }
 
     if(detections[0].expressions.angry > calibrateAngry){
@@ -89,12 +89,12 @@ video.addEventListener('play', () => {
     }
 
     if(detections[0].expressions.happy > calibrateHappy){
-      console.log("Happy")
-      startAnimation('pulseHappyBehind1')
-      startAnimation2('pulseHappyBehind2')
+      console.log("Smile")
+      startAnimation('pulseSmile')
+      startAnimation2('pulseSmile')
     }else{
-      stopAnimation('pulseHappyBehind1')
-      stopAnimation('pulseHappyBehind2')
+      stopAnimation('pulseSmile')
+      stopAnimation('pulseSmile')
     }
 
   }, 100)
